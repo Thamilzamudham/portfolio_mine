@@ -2,143 +2,172 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Thamilzamudham Palanisamy – Data Analyst</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Thamilzamudham Palanisamy – Data Analyst, Dubai</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Public+Sans:wght@400;500;600&display=swap">
 <style>
-:root{--bg:#f2f5f3;--card:#fff;--ink:#14212b;--mute:#4e5f6a;--line:#d5ddd9;--acc:#0b6e62;--warm:#d9a21b}
-@media (prefers-color-scheme:dark){:root{--bg:#10181d;--card:#18232a;--ink:#e8eeec;--mute:#9fb0b8;--line:#2b3a43;--acc:#45c4b0;--warm:#e6b93d}}
+:root{--bg:#f4f6f8;--card:#fff;--ink:#0e1b2c;--mute:#52606f;--line:#dbe1e7;--hero:#0e1b2c;--on:#eaf0f6;--acc:#0f8f78;--mint:#3ddbb0;--warm:#e0a526}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b141f;--card:#132131;--ink:#e8eef4;--mute:#9bacbc;--line:#233345;--hero:#07101a;--acc:#3ddbb0}}
+:root[data-theme="dark"]{--bg:#0b141f;--card:#132131;--ink:#e8eef4;--mute:#9bacbc;--line:#233345;--hero:#07101a;--acc:#3ddbb0}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 "IBM Plex Sans",system-ui,sans-serif}
-.w{max-width:920px;margin:0 auto;padding:0 20px}
-h1,h2,h3{font-family:"Source Serif 4",Georgia,serif;margin:0;line-height:1.2}
-h1{font-size:clamp(2rem,6vw,3.1rem)}
-h2{font-size:1.6rem;margin-bottom:6px}
-header{padding:48px 0 36px}
-.hero{display:flex;gap:32px;align-items:center;flex-wrap:wrap}
-.hero img{width:190px;height:190px;border-radius:50%;object-fit:cover;object-position:50% 20%;border:4px solid var(--acc);background:var(--card)}
-.role{color:var(--acc);font-weight:600;margin:8px 0 12px;font-size:1.1rem}
-.lead{color:var(--mute);max-width:60ch;margin:0 0 18px}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 "Public Sans",system-ui,sans-serif;padding-bottom:env(safe-area-inset-bottom,0px)}
+.w{max-width:940px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:Sora,system-ui,sans-serif;margin:0;line-height:1.2}
+h2{font-size:1.5rem;margin-bottom:8px}
+.hero{background:var(--hero);color:var(--on);padding:calc(52px + env(safe-area-inset-top,0px)) 0 56px}
+.hg{display:grid;grid-template-columns:200px 1fr;gap:36px;align-items:center}
+.hg img{width:200px;height:200px;border-radius:50%;object-fit:cover;border:4px solid var(--mint)}
+.hero h1{font-size:clamp(2rem,5.5vw,3rem)}
+.tag{color:var(--mint);font-weight:600;margin:10px 0 12px;font-size:1.1rem}
+.hero p{margin:0 0 20px;max-width:58ch;color:#c4d0dc}
 .btns{display:flex;flex-wrap:wrap;gap:10px}
-.btn{padding:9px 16px;border:1.5px solid var(--acc);border-radius:6px;color:var(--acc);text-decoration:none;font-weight:500}
-.btn.m{background:var(--acc);color:var(--bg)}
-a:focus-visible{outline:3px solid var(--warm);outline-offset:2px}
-section{padding:32px 0;border-top:1px solid var(--line)}
+.btn{padding:10px 17px;border-radius:7px;border:1.5px solid var(--mint);color:var(--mint);text-decoration:none;font-weight:600;font-size:.95rem}
+.btn.m{background:var(--mint);color:#07101a}
+.avail{display:inline-block;margin-top:18px;font-size:.88rem;color:#c4d0dc}
+.avail::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--mint);margin-right:8px}
+a:focus-visible,summary:focus-visible{outline:3px solid var(--warm);outline-offset:2px}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-top:-30px;position:relative}
+.facts div{background:var(--card);padding:18px 14px;text-align:center}
+.facts b{display:block;font:700 1.9rem Sora,sans-serif;color:var(--acc)}
+.facts span{font-size:.85rem;color:var(--mute)}
+section{padding:42px 0 6px}
 .sub{color:var(--mute);margin:0 0 20px;max-width:62ch}
-.tl{display:flex;height:44px;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--card)}
-.tl div{display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:600;color:#14212b;white-space:nowrap;overflow:hidden}
-.a{background:var(--warm)}.b{background:var(--acc);color:#fff!important}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px}
+.card h3{font-size:1.05rem;margin-bottom:6px}
+.card p{margin:0;color:var(--mute);font-size:.94rem}
+.tl{display:flex;height:46px;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card)}
+.tl div{display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:600;color:#0e1b2c;white-space:nowrap;overflow:hidden}
+.a{background:var(--warm)}.b{background:var(--mint)}
 .g{background:repeating-linear-gradient(135deg,var(--line) 0 6px,transparent 6px 12px);color:var(--mute)!important}
 .yr{display:flex;justify-content:space-between;color:var(--mute);font-size:.8rem;margin-top:6px}
-.job{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--acc);border-radius:6px;padding:20px;margin-bottom:16px}
-.job .d{color:var(--mute);font-size:.9rem;margin:2px 0 10px}
-.job ul{margin:0;padding-left:18px}.job li{margin-bottom:5px}
-.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
-.tags span{font-size:.8rem;padding:2px 10px;border:1px solid var(--line);border-radius:99px;color:var(--mute)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
-.grid div{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:16px}
-.grid h3{font-size:1.02rem;margin-bottom:6px}
-.grid p{margin:0;color:var(--mute);font-size:.93rem}
-ul.p{padding-left:18px;margin:12px 0 0}
-footer{padding:28px 0 48px;color:var(--mute);font-size:.9rem}
-footer a{color:var(--acc)}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;margin-bottom:12px}
+summary{cursor:pointer;padding:16px 20px;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary h3{font-size:1.08rem}
+summary small{display:block;color:var(--mute);margin-top:2px}
+summary::after{content:"+";float:right;margin-top:-34px;font:600 1.4rem Sora;color:var(--acc)}
+details[open] summary::after{content:"\2212"}
+details ul{margin:0;padding:0 20px 8px 38px}
+details li{margin-bottom:6px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;padding:4px 20px 18px}
+.tags span,.chips span{font-size:.8rem;padding:3px 10px;border:1px solid var(--line);border-radius:99px;color:var(--mute)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.cta{background:var(--hero);color:var(--on);border-radius:12px;padding:32px;margin:42px 0 20px}
+.cta p{color:#c4d0dc;margin:6px 0 18px}
+footer{padding:10px 0 40px;color:var(--mute);font-size:.85rem}
+@media (max-width:680px){.hg{grid-template-columns:1fr;justify-items:start}.facts{grid-template-columns:repeat(2,1fr)}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
-<div class="w">
-<header>
-<div class="hero">
-<img src="photo.png" alt="Thamilzamudham Palanisamy">
+<header class="hero"><div class="w"><div class="hg">
+<img src="photo.png" alt="Portrait of Thamilzamudham Palanisamy">
 <div>
 <h1>Thamilzamudham Palanisamy</h1>
-<p class="role">Data Analyst – SQL, Python, Excel, Power BI</p>
-<p class="lead">I analyse operational and performance data and turn it into KPI reports, dashboards and clear recommendations for management. I have 4+ years of experience across telecom and technical services. Based in Dubai and available immediately.</p>
+<p class="tag">Data Analyst · SQL · Python · Excel · Power BI</p>
+<p>I turn operational and commercial data into KPI reports, dashboards and clear recommendations. I have worked with telecom and technical-services teams in India and the UAE, and I check every number before it reaches management.</p>
 <div class="btns">
 <a class="btn m" href="mailto:thamilz764@gmail.com">Email me</a>
 <a class="btn" href="https://linkedin.com/in/thamilzamudhampalanisamy-932923202">LinkedIn</a>
 <a class="btn" href="https://github.com/Thamilzamudham">GitHub</a>
 <a class="btn" href="tel:+971569534686">+971 56 953 4686</a>
 </div>
+<span class="avail">Available immediately · Dubai, UAE</span>
+</div></div></div></header>
+
+<main class="w">
+<div class="facts">
+<div><b>4+</b><span>years in data and reporting</span></div>
+<div><b>10+</b><span>client locations tracked</span></div>
+<div><b>50+</b><span>hardware nodes validated</span></div>
+<div><b>3×</b><span>Employee of the Month</span></div>
 </div>
-</div>
-</header>
 
 <section>
-<h2>Career at a glance</h2>
-<p class="sub">From my first analyst role in 2018 to today. I took a planned career break from Nov 2022 to Jan 2026 and used it to complete the IBM Data Science Professional Certificate.</p>
-<div class="tl" role="img" aria-label="Timeline of roles from 2018 to 2026">
-<div class="a" style="flex:32">Sensiple</div>
-<div style="flex:6"></div>
-<div class="a" style="flex:16">Ericsson</div>
-<div class="g" style="flex:39">Upskilling</div>
-<div class="b" style="flex:6">SAR</div>
+<h2>What I do</h2>
+<p class="sub">Three things I have done in every role.</p>
+<div class="cards">
+<div class="card"><h3>Clean and validate</h3><p>I check large datasets against their specifications with SQL and Python, then report and resolve the discrepancies.</p></div>
+<div class="card"><h3>Analyse and report</h3><p>I track KPIs, find trends in project and account performance, and present them to senior management in Excel dashboards and reports.</p></div>
+<div class="card"><h3>Automate and model</h3><p>I have built Python pipelines and machine learning models, and automated checks that would take hours by hand.</p></div>
+</div>
+</section>
+
+<section>
+<h2>Career timeline</h2>
+<p class="sub">I took a planned career break from Nov 2022 to Jan 2026 and used it to complete the IBM Data Science Professional Certificate.</p>
+<div class="tl" role="img" aria-label="Timeline: Sensiple 2018-2020, Ericsson 2021-2022, career break 2022-2026, SAR Technology 2026">
+<div class="a" style="flex:32">Sensiple</div><div style="flex:6"></div><div class="a" style="flex:16">Ericsson</div><div class="g" style="flex:39">Upskilling</div><div class="b" style="flex:6">SAR</div>
 </div>
 <div class="yr"><span>2018</span><span>2020</span><span>2022</span><span>2024</span><span>2026</span></div>
 </section>
 
 <section>
-<h2>Experience and selected work</h2>
-<p class="sub">What I did in each role, from data collection to reporting.</p>
+<h2>Experience</h2>
+<p class="sub">Tap a role to see what I did.</p>
 
-<article class="job">
-<h3>Electrical Engineer / Technical Operations Coordinator</h3>
-<div class="d">SAR Technology, Dubai · Feb 2026 – Jul 2026</div>
+<details open>
+<summary><h3>Electrical Engineer / Technical Operations Coordinator</h3><small>SAR Technology, Dubai · Feb 2026 – Jul 2026</small></summary>
 <ul>
-<li>Tracked and analysed operational and commercial data across 10+ client locations, and produced KPI performance reports for senior management.</li>
-<li>Built and maintained Excel KPI dashboards using pivot tables to spot trends in project and account performance, supporting client retention and contract renewal decisions.</li>
-<li>Maintained master trackers for contracts, proposals, PDC cheques, audit records and revenue data, updated monthly and quarterly.</li>
-<li>Delivered presentations and dashboards on performance, timelines, deliverables and service delivery.</li>
+<li>Tracked and analysed operational and commercial data across 10+ client locations and produced KPI reports for senior management.</li>
+<li>Built and maintained Excel KPI dashboards with pivot tables to spot trends in project and account performance, supporting client retention and renewal decisions.</li>
+<li>Maintained master trackers for contracts, proposals, PDC cheques, audit records and revenue, updated monthly and quarterly.</li>
+<li>Presented performance, timelines and service delivery to business stakeholders.</li>
 </ul>
 <div class="tags"><span>Excel</span><span>Pivot tables</span><span>KPI tracking</span><span>Management reporting</span></div>
-</article>
+</details>
 
-<article class="job">
-<h3>Senior Software Engineer – Verification Engineer</h3>
-<div class="d">Future Focus Infotech, deployed via TCS to Ericsson, Hyderabad · Jul 2021 – Oct 2022</div>
+<details>
+<summary><h3>Senior Software Engineer – Verification Engineer</h3><small>Future Focus Infotech, deployed via TCS to Ericsson, Hyderabad · Jul 2021 – Oct 2022</small></summary>
 <ul>
 <li>Cross-validated large technical datasets against TSD/Hydra specification documents using SQL, and reported and resolved data discrepancies.</li>
-<li>Wrote Python automation scripts to verify data quality and accuracy across 50+ hardware nodes.</li>
+<li>Wrote Python automation scripts to check data quality and accuracy across 50+ hardware nodes.</li>
 <li>Produced KPI and performance reports that supported data-driven decisions for integration teams.</li>
 <li>Named Employee of the Month three times in a row.</li>
 </ul>
 <div class="tags"><span>SQL</span><span>Python</span><span>Data validation</span><span>KPI reports</span></div>
-</article>
+</details>
 
-<article class="job">
-<h3>System Analyst</h3>
-<div class="d">Sensiple Software Solutions, Chennai · May 2018 – Dec 2020</div>
+<details>
+<summary><h3>System Analyst</h3><small>Sensiple Software Solutions, Chennai · May 2018 – Dec 2020</small></summary>
 <ul>
-<li>Built and deployed Python machine learning models (Random Forest, SVM, Naïve Bayes, KNN, regression) for a chatbot platform.</li>
-<li>Designed end-to-end data pipelines covering collection, cleaning, pre-processing and model deployment.</li>
+<li>Built and deployed Python models (Random Forest, SVM, Naïve Bayes, KNN, regression) for a chatbot platform.</li>
+<li>Designed data pipelines covering collection, cleaning, pre-processing and deployment.</li>
 <li>Delivered sentiment analysis, anomaly detection and pattern recognition use cases.</li>
 <li>Ran exploratory data analysis in Python and R, and used SQL, Python and Excel to support product and project prioritisation.</li>
-<li>Gathered and documented requirements in JIRA and worked with developer and QA teams to validate data against business needs.</li>
+<li>Gathered requirements in JIRA and worked with developer and QA teams to validate data against business needs.</li>
 </ul>
 <div class="tags"><span>Python</span><span>R</span><span>Scikit-learn</span><span>EDA</span><span>Data pipelines</span><span>JIRA</span></div>
-</article>
+</details>
 </section>
 
 <section>
 <h2>Skills</h2>
-<div class="grid" style="margin-top:16px">
-<div><h3>Data analysis and reporting</h3><p>SQL, advanced Excel (pivot tables, VLOOKUP/XLOOKUP), data cleaning and validation, EDA, KPI tracking, trend analysis.</p></div>
-<div><h3>Dashboards and visualisation</h3><p>Excel dashboards and charts, Matplotlib, status and management reporting. Power BI is in progress.</p></div>
-<div><h3>Programming and ML</h3><p>Python, R, Scikit-learn, Jupyter Notebook, VS Code. Random Forest, SVM, Naïve Bayes, KNN, regression.</p></div>
-<div><h3>Tools and collaboration</h3><p>JIRA, Postman, MS Azure, Microsoft Office, requirement gathering, cross-functional teamwork, stakeholder reporting.</p></div>
+<div class="cards" style="margin-top:16px">
+<div class="card"><h3>Analysis and reporting</h3><div class="chips"><span>SQL</span><span>Advanced Excel</span><span>Pivot tables</span><span>VLOOKUP / XLOOKUP</span><span>Data cleaning</span><span>EDA</span><span>KPI tracking</span><span>Trend analysis</span></div></div>
+<div class="card"><h3>Dashboards</h3><div class="chips"><span>Excel dashboards</span><span>Matplotlib</span><span>Management reporting</span><span>Power BI (in progress)</span></div></div>
+<div class="card"><h3>Programming and ML</h3><div class="chips"><span>Python</span><span>R</span><span>Scikit-learn</span><span>Jupyter</span><span>Random Forest</span><span>SVM</span><span>Regression</span></div></div>
+<div class="card"><h3>Tools and teamwork</h3><div class="chips"><span>JIRA</span><span>Postman</span><span>MS Azure</span><span>Microsoft Office</span><span>Requirement gathering</span><span>Stakeholder reporting</span></div></div>
 </div>
 </section>
 
 <section>
 <h2>Education and certifications</h2>
-<ul class="p">
-<li><b>IBM Data Science Professional Certificate</b> (IBM / Coursera, completed June 2025): Python, SQL, data analysis, machine learning, data visualisation.</li>
-<li><b>Microsoft Data Analysis with SQL, Excel and Power BI Specialization</b> (Coursera): in progress.</li>
-<li><b>B.E., Electronics and Communication Engineering</b>, Velalar College of Engineering and Technology, 2018.</li>
-<li><b>Languages:</b> English (professional), Tamil (native).</li>
-</ul>
+<div class="cards" style="margin-top:16px">
+<div class="card"><h3>IBM Data Science Professional Certificate</h3><p>IBM / Coursera · completed June 2025. Python, SQL, data analysis, machine learning, data visualisation.</p></div>
+<div class="card"><h3>Microsoft Data Analysis with SQL, Excel and Power BI</h3><p>Coursera · in progress. Strengthening my dashboard and reporting skills.</p></div>
+<div class="card"><h3>B.E., Electronics and Communication Engineering</h3><p>Velalar College of Engineering and Technology, 2018. English (professional), Tamil (native).</p></div>
+</div>
 </section>
 
-<footer><p>Let's talk about your data: <a href="mailto:thamilz764@gmail.com">thamilz764@gmail.com</a> · Dubai, UAE</p></footer>
+<div class="cta">
+<h2>Let's talk about your data</h2>
+<p>I am available immediately and based in Dubai.</p>
+<div class="btns"><a class="btn m" href="mailto:thamilz764@gmail.com">thamilz764@gmail.com</a><a class="btn" href="tel:+971569534686">+971 56 953 4686</a></div>
 </div>
+<footer>Thamilzamudham Palanisamy · Data Analyst · Dubai, UAE</footer>
+</main>
 </body>
 </html>
